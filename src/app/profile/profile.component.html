@@ -1,0 +1,32 @@
+<mat-card class="body">
+
+<div [style.height]="'1000px'" class="relative">
+  <mat-sidenav-container  fullscreen>
+    <mat-sidenav [opened]="true" position="end" mode="side" #sidesheet [style.width]="'800px'">
+      <td-sidesheet >
+        <td-sidesheet-header>
+          <td-sidesheet-title>Example</td-sidesheet-title>
+          <button mat-icon-button td-sidesheet-header-action>
+            <mat-icon matTooltipPosition="before" matTooltip="Close" (click)="sidesheet.toggle()">close</mat-icon>
+          </button>
+        </td-sidesheet-header>
+        <td-sidesheet-content>
+          <p>
+            <td-json-formatter [data]="fhir" key="root" [levelsOpen]="3">
+            </td-json-formatter>
+          </p>
+        </td-sidesheet-content>
+      </td-sidesheet>
+    </mat-sidenav>
+    <mat-toolbar layout="row" layout-align="start center" flex>
+      <span flex></span>
+      <button mat-button (click)="sidesheet.toggle()">Toggle Example</button>
+    </mat-toolbar>
+    <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
+  </mat-sidenav-container>
+</div>
+
+</mat-card>
+
+
+

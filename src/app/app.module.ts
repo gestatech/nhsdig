@@ -10,20 +10,72 @@ import { CovalentHttpModule } from '@covalent/http';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
+import { IgMainComponent } from './ig-main/ig-main.component';
+import {AppRoutingModule} from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ProfileComponent } from './profile/profile.component';
+import { ValueSetComponent } from './value-set/value-set.component';
+import {MatCardActions, MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSortModule} from '@angular/material/sort';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {CovalentJsonFormatterModule} from '@covalent/core/json-formatter';
+import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
+import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IgMainComponent,
+    HomeComponent,
+    ProfileComponent,
+    ValueSetComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
     CovalentLayoutModule,
     CovalentStepsModule,
     // (optional) Additional Covalent Modules imports
     CovalentHttpModule.forRoot(),
     CovalentHighlightModule,
     CovalentMarkdownModule,
-    CovalentDynamicFormsModule
+    CovalentFlavoredMarkdownModule,
+    CovalentDynamicFormsModule,
+    CovalentSidesheetModule,
+
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatSortModule,
+    MatToolbarModule,
+    MatDialogModule,
+    CovalentJsonFormatterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
