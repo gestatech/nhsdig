@@ -5,14 +5,21 @@
         <mat-icon>home</mat-icon>
         Home
       </a>
-      <a mat-list-item>Profiles</a>
+      <h3>Messages</h3>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/message/DM-MedicationRequest">prescription-order</a>
+        <a mat-list-item routerLink="/message/DM-MedicationRequest">prescription-order-update</a>
+        <a mat-list-item routerLink="/message/DM-MedicationRequest">prescription-order-response</a>
+      </mat-nav-list>
+      <h3>Profiles</h3>
       <mat-nav-list>
         <a mat-list-item routerLink="/profile/DM-MedicationRequest">DM-MedicationRequest</a>
+        <a mat-list-item routerLink="/profile/Patient">DM-Patient</a>
       </mat-nav-list>
-      <a mat-list-item>Extensions</a>
-      <a mat-list-item>CodeSystem</a>
-      <a mat-list-item>ValueSet</a>
-      <a mat-list-item>ConceptMap</a>
+      <h3>Extensions</h3>
+      <h3>CodeSystem</h3>
+      <h3>ValueSet</h3>
+      <h3>ConceptMap</h3>
     </mat-nav-list>
 
   <router-outlet></router-outlet>

@@ -2,7 +2,7 @@
 
 <div [style.height]="'1000px'" class="relative">
   <mat-sidenav-container  fullscreen>
-    <mat-sidenav [opened]="true" position="end" mode="side" #sidesheet [style.width]="'800px'">
+    <mat-sidenav [opened]="true" position="end" mode="side" #sidesheet [style.width]="'400px'">
       <td-sidesheet >
         <td-sidesheet-header>
           <td-sidesheet-title>Example</td-sidesheet-title>
@@ -23,6 +23,11 @@
       <button mat-button (click)="sidesheet.toggle()">Toggle Example</button>
     </mat-toolbar>
     <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
+
+    <iframe src="https://www.simplifier.net/embed/render?id=ElectronicPrescriptionService/DM-MedicationRequest" height="345px" width="100%">
+
+    </iframe>
+
   </mat-sidenav-container>
 </div>
 
