@@ -33,6 +33,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {CovalentJsonFormatterModule} from '@covalent/core/json-formatter';
 import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
 import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
+import { MessageDefinitionComponent } from './message-definition/message-definition.component';
+import {CovalentMessageModule} from "@covalent/core/message";
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
     IgMainComponent,
     HomeComponent,
     ProfileComponent,
-    ValueSetComponent
+    ValueSetComponent,
+    MessageDefinitionComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
     CovalentFlavoredMarkdownModule,
     CovalentDynamicFormsModule,
     CovalentSidesheetModule,
+    CovalentMessageModule,
 
     MatIconModule,
     MatListModule,

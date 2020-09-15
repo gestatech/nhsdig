@@ -1,5 +1,3 @@
-
-
 <div [style.height]="'1000px'" class="relative">
   <mat-sidenav-container  fullscreen>
     <mat-sidenav [opened]="true" position="end" mode="side" #sidesheet [style.width]="'400px'">
@@ -22,17 +20,11 @@
       <span flex></span>
       <button mat-button (click)="sidesheet.toggle()">Toggle Example</button>
     </mat-toolbar>
-    <mat-card>
-    <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
-
-    <iframe src="https://www.simplifier.net/embed/render?id=ElectronicPrescriptionService/DM-MedicationRequest" height="345px" width="100%">
-
-    </iframe>
-    </mat-card>
+<mat-card>
+  <mat-card-header><h1>prescription-order</h1></mat-card-header>
+  <td-message label="Url" sublabel="https://fhir.nhs.uk/R4/CodeSystem/message-event" color="accent" icon="info"></td-message>
+  <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
+</mat-card>
 
   </mat-sidenav-container>
 </div>
-
-
-
-
