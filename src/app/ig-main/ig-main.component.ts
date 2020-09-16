@@ -8,10 +8,25 @@ import {Router} from '@angular/router';
 })
 export class IgMainComponent implements OnInit {
 
+  isExpanded = true;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  showSubSubMenu: boolean = false;
+
   constructor(private router: Router
               ) { }
 
   ngOnInit(): void {
   }
+  mouseenter() {
+    if (!this.isExpanded) {
+      this.isShowing = true;
+    }
+  }
 
+  mouseleave() {
+    if (!this.isExpanded) {
+      this.isShowing = false;
+    }
+  }
 }

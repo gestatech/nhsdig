@@ -35,6 +35,7 @@ import {CovalentFlavoredMarkdownModule} from '@covalent/flavored-markdown';
 import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
 import { MessageDefinitionComponent } from './message-definition/message-definition.component';
 import {CovalentMessageModule} from "@covalent/core/message";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 @NgModule({
@@ -46,41 +47,42 @@ import {CovalentMessageModule} from "@covalent/core/message";
     ValueSetComponent,
     MessageDefinitionComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    CovalentLayoutModule,
-    CovalentStepsModule,
-    // (optional) Additional Covalent Modules imports
-    CovalentHttpModule.forRoot(),
-    CovalentHighlightModule,
-    CovalentMarkdownModule,
-    CovalentFlavoredMarkdownModule,
-    CovalentDynamicFormsModule,
-    CovalentSidesheetModule,
-    CovalentMessageModule,
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        CovalentLayoutModule,
+        CovalentStepsModule,
+        // (optional) Additional Covalent Modules imports
+        CovalentHttpModule.forRoot(),
+        CovalentHighlightModule,
+        CovalentMarkdownModule,
+        CovalentFlavoredMarkdownModule,
+        CovalentDynamicFormsModule,
+        CovalentSidesheetModule,
+        CovalentMessageModule,
 
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatTableModule,
-    MatButtonModule,
-    MatCardModule,
-    MatTooltipModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatChipsModule,
-    MatSortModule,
-    MatToolbarModule,
-    MatDialogModule,
-    CovalentJsonFormatterModule,
-  ],
+        MatIconModule,
+        MatListModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatButtonModule,
+        MatCardModule,
+        MatTooltipModule,
+        MatRadioModule,
+        MatSelectModule,
+        MatChipsModule,
+        MatSortModule,
+        MatToolbarModule,
+        MatDialogModule,
+        CovalentJsonFormatterModule,
+        MatExpansionModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

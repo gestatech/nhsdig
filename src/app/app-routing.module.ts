@@ -14,6 +14,13 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'home', component: IgMainComponent,
+
+    children : [
+      { path: '', component: HomeComponent}
+    ]
+  },
+  {
     path: 'message', component: IgMainComponent,
 
     children: [
