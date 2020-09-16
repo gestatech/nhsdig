@@ -10,7 +10,7 @@
         </td-sidesheet-header>
         <td-sidesheet-content>
           <p>
-            <td-json-formatter [data]="fhir" key="root" [levelsOpen]="3">
+            <td-json-formatter [data]="fhirResource" key="root" [levelsOpen]="3">
             </td-json-formatter>
           </p>
         </td-sidesheet-content>
@@ -23,7 +23,57 @@
 <mat-card>
   <mat-card-header><h1>prescription-order</h1></mat-card-header>
   <td-message label="Url" sublabel="https://fhir.nhs.uk/R4/CodeSystem/message-event" color="accent" icon="info"></td-message>
-  <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
+<br>
+  <td-message label="OAS!" sublabel="Provide a BACK button or link to OAS Specs" color="accent" icon="error"></td-message>
+  Documentation on this page is driven by markdown in the MessageDefinition resource sections:
+  <ul>
+  <li>description</li>
+  <li>purpose</li>
+  <li>copyright</li>
+</ul>
+  and content of the resource as illustrated below.
+
+  The example is displayed using a json formatter, it would be possible to use something like a Monaco Editor for a raw display (or editable). This is for illustration and intent to to align with API documentation patterns.
+
+  <mat-list>
+    <mat-list-item>
+    <span flex-auto fxLayoutAlign="space-between center">
+                  Event Coding
+                  <b>unsolicited-observation</b>
+                  </span>
+    </mat-list-item>
+    <mat-list-item>
+      <span flex-auto fxLayoutAlign="space-between center">
+                  Category
+                  <b>consequence</b>
+                  </span>
+    </mat-list-item>
+  </mat-list>
+  <h2>Focus</h2>
+  <table mat-table [dataSource]="dataSource" >
+
+
+    <ng-container matColumnDef="profile">
+      <th mat-header-cell *matHeaderCellDef> Profile </th>
+      <td mat-cell *matCellDef="let element"> <a [routerLink]="element.url">{{element.profile}}</a></td>
+    </ng-container>
+
+    <ng-container matColumnDef="min">
+      <th mat-header-cell *matHeaderCellDef> Minimum </th>
+      <td mat-cell *matCellDef="let element"> {{element.min}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="max">
+      <th mat-header-cell *matHeaderCellDef> Maximum </th>
+      <td mat-cell *matCellDef="let element"> {{element.max}}</td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
 </mat-card>
 
   </mat-sidenav-container>

@@ -4,6 +4,7 @@ import {IgMainComponent} from './ig-main/ig-main.component';
 import {HomeComponent} from './home/home.component';
 import {ProfileComponent} from './profile/profile.component';
 import {MessageDefinitionComponent} from "./message-definition/message-definition.component";
+import {CodeSystemComponent} from "./code-system/code-system.component";
 
 const routes: Routes = [
   {
@@ -32,6 +33,20 @@ const routes: Routes = [
 
     children: [
       { path: ':profileid', component: ProfileComponent}
+    ]
+  },
+  {
+    path: 'codesystem', component: IgMainComponent,
+
+    children: [
+      { path: ':uri', component: CodeSystemComponent}
+    ]
+  },
+  {
+    path: 'valueset', component: IgMainComponent,
+
+    children: [
+      { path: ':uri', component: CodeSystemComponent}
     ]
   },
 ];

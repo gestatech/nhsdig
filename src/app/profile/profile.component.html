@@ -12,7 +12,7 @@
         </td-sidesheet-header>
         <td-sidesheet-content>
           <p>
-            <td-json-formatter [data]="fhir" key="root" [levelsOpen]="3">
+            <td-json-formatter [data]="fhirResource" key="root" [levelsOpen]="3">
             </td-json-formatter>
           </p>
         </td-sidesheet-content>
@@ -23,6 +23,16 @@
       <button mat-button (click)="sidesheet.toggle()">Toggle Example</button>
     </mat-toolbar>
     <mat-card>
+
+      <td-message label="Url" sublabel="https://fhir.nhs.uk/R4/StructureDefinition/DM-MedicationRequest" color="accent" icon="info"></td-message>
+      <br>
+      <td-message label="OAS!" sublabel="Provide a BACK button or link to OAS Specs (and MessageDefinition)" color="accent" icon="error"></td-message>
+      <p>
+        The FHIR resource, StructuredDefinition, does not contain a markdown section.
+      The tree shown below is in an iFrame and renders from simplifier. This means the links go off to simplifier.
+        The example is displayed using a json formatter, it would be possible to use something like a Monaco Editor for a raw display (or editable).
+      </p>
+
     <td-flavored-markdown class="mat-card">{{ basicFlavoredMarkdown }}</td-flavored-markdown>
 
     <iframe src="https://www.simplifier.net/embed/render?id=ElectronicPrescriptionService/DM-MedicationRequest" height="345px" width="100%">

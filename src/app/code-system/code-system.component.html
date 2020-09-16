@@ -1,0 +1,40 @@
+<mat-card>
+  <h2>CodeSystem or ValueSet</h2>
+  <p>This page should be rendered from data held within the respective resources.</p>
+  <p>For ValueSets these will be based on a CodeSystem which will either be in a IG or be on a FHIR Terminology server - especially for SNOMED CT based ValueSets</p>
+
+  <p>Note like MessageDefinition, these resources contain markdown elements which simiplifier does not handle well.</p>
+
+  <ul>
+    <li>description</li>
+    <li>purpose</li>
+    <li>copyright</li>
+  </ul>
+
+<h2>Expansion</h2>
+
+  <table mat-table [dataSource]="dataSource" >
+
+
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef> Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.code}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="system">
+      <th mat-header-cell *matHeaderCellDef> System </th>
+      <td mat-cell *matCellDef="let element"> <a [routerLink]="element.routerLink"> {{element.system}}</a></td>
+    </ng-container>
+
+    <ng-container matColumnDef="display">
+      <th mat-header-cell *matHeaderCellDef> Display </th>
+      <td mat-cell *matCellDef="let element"> {{element.display}}</td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</mat-card>

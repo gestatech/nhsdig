@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import countries from '../../assets/MedicationRequestBundle.json';
+import resource from '../../assets/MedicationRequestBundle.json';
 
 @Component({
   selector: 'app-message-definition',
@@ -8,36 +8,16 @@ import countries from '../../assets/MedicationRequestBundle.json';
 })
 export class MessageDefinitionComponent implements OnInit {
 
-  public fhir= countries;
+  public fhirResource= resource;
 
-  public basicFlavoredMarkdown = `
+  dataSource: any[] = [
+    { profile: 'DM-MedicationRequest', url: '/profile/DM-MedicationRequest', min : "1", max: '*' },
+    { profile: 'DM-Patient', url: '/profile/DM-MedicationRequest', min : "1", max: '1' },
+    { profile: 'DM-Provenance', url: '/profile/DM-MedicationRequest', min: "0",max: '1'},
+    { profile: 'DM-CommunicationRequest', url: '/profile/DM-MedicationRequest', min : "0", max: '*' }
+  ];
+  displayedColumns: string[] = [ 'profile', 'min', 'max'];
 
- ### Event Coding
-
-
- | Category |
- |--|
- | consequence |
-
- ### Focus
-
-
- | Profile | Min | Max |
- |--|--|--|
- |  DM-MedicationRequest}} | 1 | 4 |
- |  DM-Patient | 1 | 1 |
- | DM-Provenance *MUST* for \`$process-message\` API |   0 | 1 |
- | DM-CommunicationRequest | 0 | * |
- `;
-  /*
-
- | [Spine-Practitioner](https://simplifier.net/guide/NHSDigitalSpine/Spine-Practitioner) | 1 | * |
- | [Spine-PractitionerRole](https://simplifier.net/guide/NHSDigitalSpine/Spine-PractitionerRole) | 1 | * |
- | [Spine-Organization](https://simplifier.net/guide/NHSDigitalSpine/Spine-Organization) | 1 | * |
-
-
- `;
-*/
   constructor() { }
 
   ngOnInit(): void {

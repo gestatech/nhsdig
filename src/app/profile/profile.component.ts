@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import countries from '../../assets/MedicationRequestBundle.json';
+import resource from '../../assets/MedicationRequest.json';
 
 @Component({
   selector: 'app-profile',
@@ -10,13 +10,13 @@ export class ProfileComponent implements OnInit {
 
   constructor() { }
 
-  public fhir = countries;
+  public fhirResource = resource;
+
+
 
   public basicFlavoredMarkdown = `
 
-  | Url |
-  |-----|
-  | https://fhir.nhs.uk/R4/StructureDefinition/DM-CommunicationRequest |
+
 
   ### Dose Syntax
 

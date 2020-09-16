@@ -36,6 +36,7 @@ import {CovalentSidesheetModule} from '@covalent/core/sidesheet';
 import { MessageDefinitionComponent } from './message-definition/message-definition.component';
 import {CovalentMessageModule} from "@covalent/core/message";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { CodeSystemComponent } from './code-system/code-system.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
     HomeComponent,
     ProfileComponent,
     ValueSetComponent,
-    MessageDefinitionComponent
+    MessageDefinitionComponent,
+    CodeSystemComponent
   ],
     imports: [
         BrowserModule,
