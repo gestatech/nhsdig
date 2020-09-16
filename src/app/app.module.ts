@@ -37,6 +37,7 @@ import { MessageDefinitionComponent } from './message-definition/message-definit
 import {CovalentMessageModule} from "@covalent/core/message";
 import {MatExpansionModule} from "@angular/material/expansion";
 import { CodeSystemComponent } from './code-system/code-system.component';
+import { GraphComponent } from './graph/graph.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { CodeSystemComponent } from './code-system/code-system.component';
     ProfileComponent,
     ValueSetComponent,
     MessageDefinitionComponent,
-    CodeSystemComponent
+    CodeSystemComponent,
+    GraphComponent
   ],
     imports: [
         BrowserModule,
